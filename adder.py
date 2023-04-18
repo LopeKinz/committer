@@ -8,7 +8,7 @@ from threading  import Thread
 def create_commit():
     while True:
         system("git pull -X theirs")
-        for _ in range(100):
+        for _ in range(10000):
             with open(OUTPUT_FILE, "w") as f:
                 f.write(str(datetime.now()))
                 
